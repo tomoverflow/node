@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Node | <%= title %> </title>
+</head>
+<body>
+
+    <nav>
+        <div class="site-title">
+            <a href="/">Tom</a>
+            <p>First Node Blog</p>
+        </div>
+
+        <ul>
+            <li><a href="/">Blogs</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog/create">New Post</a></li>
+        </ul>
+    </nav>
+
+    <div class="blog content">
+        <h2>ALl Blogs</h2>
+
+        <% if (blogs.length > 0) { %> 
+
+            <% blogs.forEach(blog => { %>
+                <h3 class="title"> <%= blog.title %>  </h3>
+                <p class="snippet"> <%= blog.snippet %> </p>
+            <% }) %>  
+
+        <% } else { %> 
+            <p>There are blogs to display</p>
+        <% } %> 
+    </div>
+    
+</body>
+</html>
