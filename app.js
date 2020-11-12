@@ -39,6 +39,6 @@ app.get('/blog/create', (req, res)=>{
 //404 page
 app.use((req, res)=>{
     // res.status(404).res.sendFile('./views/404.html', { root: __dirname})
-    res.status(404).res.render('404', { title: 'Error'})
+    res.status(404).render('404', { title: 'Error'})
 
 })
